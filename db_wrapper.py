@@ -38,7 +38,7 @@ class DbWrapper:
         return list(cursor)
 
     def is_online(self):
-        cursor = list(self.db.air.find().sort([('_id', -1)]).limit(1))
+        cursor = list(self.db.air60.find().sort([('_id', -1)]).limit(1))
         if not cursor:
             print('cursor empty! in is_online')
             return False
